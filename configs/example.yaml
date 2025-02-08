@@ -1,0 +1,23 @@
+port: 8080
+
+db:
+  schema: "postgres"
+  user: "admin"
+  password: "admin-password"
+  ip: "db"
+  port: 5432
+  database: "example"
+  ssl: "disable"
+  migrations_path: file://migrations
+
+queue_credentials:
+  urls:
+    - kafka:9092
+  topic: send-email-events
+
+clients:
+  example:
+    url: http://localhost:8080
+
+logger:
+  mode: debug

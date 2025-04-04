@@ -9,4 +9,4 @@ WORKDIR /app
 COPY --from=builder /app/bin/template ./template
 COPY migrations migrations
 
-CMD ["./template", "./configs/example.yaml"]
+ENTRYPOINT ["./template"]
